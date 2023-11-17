@@ -1,0 +1,283 @@
+/* Fonts: Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* Fontawesome */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-main: #fff;
+  --bg-minor: #f7f7f7;
+  --txt-1: #000;
+  --txt-2: #444;
+  --txt-3: #888;
+  --txt-4: #ccc;
+  --txt-5: #fff;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.ex {
+  width: 100%;
+}
+.text-03 {
+  margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 600;
+}
+/*  */
+
+.container {
+  display: flex;
+  background: #f8f8f8;
+}
+
+.main {
+  flex: 1;
+}
+
+/* Sidebar */
+
+.sidebar {
+  font-size: 18px;
+  padding: 1em;
+  background: #fff;
+  height: 100vh;
+  flex-basis: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: 0.5s;
+  box-shadow: 0 0 10px #0001;
+  border-right: 2px solid #eee;
+}
+
+.sidebar-brands {
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+}
+
+.sidebar i {
+  font-size: 24px;
+  width: 30px;
+}
+
+.sidebar-item {
+  font-size: 16px;
+  padding: 1em;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: #666;
+  position: relative;
+}
+
+.sidebar-item:hover {
+  cursor: pointer;
+  background-color: #686de0;
+  color: #fff;
+}
+
+.sidebar-item__number {
+  background-color: #be2edd;
+  color: #fff;
+  font-size: 16px;
+  padding: 0 7px;
+  position: absolute;
+  right: 1em;
+  border-radius: 5px;
+}
+
+.sidebar-item:hover .sidebar-item__number {
+  background-color: #fff;
+  color: #000;
+}
+
+.sidebar-hr {
+  border: thin solid #eee;
+}
+
+.sidebar-title {
+  padding: 15px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Header */
+
+.header {
+  padding: 1em;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  position: relative;
+  width: 400px;
+  /* flex: 1; */
+}
+
+.search > i {
+  position: absolute;
+  left: 0.75em;
+  font-size: 16px;
+  color: #aaa;
+}
+
+.search > input {
+  font-size: 16px;
+  padding: 0.5em;
+  padding-left: 2.5em;
+  border-radius: 999px;
+  background: #f7f7f7;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.search > input::placeholder {
+  color: #ccc;
+}
+
+/* Header: User */
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-item {
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-item:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.header-user img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.header-user i {
+  font-size: 24px;
+}
+
+/* Main Content */
+.main-content {
+  padding: 25px;
+}
+
+.main__title {
+  margin-bottom: 12px;
+  font-size: 30px;
+}
+.breadcumb {
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 25px;
+}
+.breadcumb *:not(:last-child):after {
+  content: " >";
+}
+
+.breadcumb :nth-child(2) {
+  color: #686de0;
+  font-weight: 500;
+}
+.sale {
+  display: flex;
+  gap: 15px;
+}
+/* Chart for sales*/
+.sale-chart {
+  flex: 1;
+}
+.info-for-chart {
+  display: flex;
+  gap: 35px;
+  margin-bottom: 35px;
+  color: #888;
+}
+.info-for-chart > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-for-chart > div:nth-child(1) i {
+  color: red;
+}
+.info-for-chart > div:nth-child(2) i {
+  color: lime;
+}
+.info-for-chart > div:nth-child(3) i {
+  color: blue;
+}
+.sale-chart {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: max-content;
+}
+
+#myChart {
+  width: 100%;
+}
+/* Top Ranking */
+.sale-top-ranking {
+  flex-basis: 27%;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+}
+.rank-item {
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.rank-item__right {
+  flex: 1;
+}
+.rank-item__right > div {
+  display: flex;
+  justify-content: space-between;
+}
+.rank-item__right > div:nth-child(1) {
+  font-weight: 500;
+  font-size: 17px;
+}
+.rank-item__right > div:nth-child(2) {
+  color: #777;
+  font-size: 14px;
+}
+.rank-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 12px;
+}
